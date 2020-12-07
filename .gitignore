@@ -112,3 +112,8 @@ dist
 
 # Opinionated
 package-lock.json
+
+# build
+target
+out
+*.log

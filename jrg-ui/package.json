@@ -5,7 +5,8 @@
   "main": "target/jrg-ui.min.esm.mjs",
   "scripts": {
     "rollup:watch": "rollup -w -c ./build/rollup.config.mjs",
-    "rollup": "rollup -c ./build/rollup.config.mjs"
+    "rollup": "rollup -c ./build/rollup.config.mjs",
+    "start": "node --experimental-modules server.mjs"
   },
   "author": "Jackie Gleason",
   "license": "ISC",
