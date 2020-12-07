@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# My IJ Stuff
+*.iml
+.idea
+
+# Other things
+.vscode
+
+# Opinionated
+package-lock.json
