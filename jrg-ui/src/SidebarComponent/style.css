@@ -1,0 +1,33 @@
+.jrg-side-bar{
+    display:flex;
+    flex-direction: column;
+    background-color: #000000;
+    --mdc-theme-text-primary-on-background: white;
+}
+
+.jrg-content{
+    overflow: hidden;
+    background-color:#666666;
+    padding: 0 16px;
+}
+.jrg-content.scrollable{
+    overflow: auto;
+}
+.jrg-content, .jrg-side-bar{
+    height: 100%;
+}
+@media screen and (max-width: 599px) {
+    :root {
+        --mdc-drawer-width: 10%;
+    }
+}
+.jrg-mardown-content{
+    height:100%;
+    width:100%;
+}
+.mdc-drawer-app-content{
+    overflow: hidden;
+}
+.mdc-drawer{
+    border: 0;
+}
