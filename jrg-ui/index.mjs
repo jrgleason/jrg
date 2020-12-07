@@ -11,6 +11,7 @@ import {SidebarComponent} from "./src/SidebarComponent/index.mjs";
 import {TopBarFixed} from "./src/TopBarFixedComponent/index.mjs";
 import {SplashComponent} from "./src/SplashComponent/index.mjs";
 import {MyDrawer} from "./src/MyDrawerComponent/index.mjs";
+import {ShadowElement} from "./src/ShadowElement.mjs";
 
 function CREATE_ELEMENT(name, object, params) {
     customElements.get(name) ||
@@ -36,4 +37,4 @@ CREATE_ELEMENT('jrg-sidebar', SidebarComponent, {});
 CREATE_ELEMENT('jrg-top-bar-fixed', TopBarFixed, {});
 CREATE_ELEMENT('jrg-splash', SplashComponent, {});
 
-export {CREATE_ELEMENT, bus}
+export {CREATE_ELEMENT, bus, ShadowElement}

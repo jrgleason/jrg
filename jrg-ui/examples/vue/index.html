@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <div id="app">
+            {{ message }}
+            <jrg-element></jrg-element>
+        </div>
+        <script type="module">
+            // TODO: Upgrade
+            // import Vue from "//unpkg.com/vue@3/dist/vue.esm-browser.js";
+            import Vue from "//unpkg.com/vue/dist/vue.esm.browser.js";
+            import {ShadowElement, CREATE_ELEMENT} from "//unpkg.com/@jrg/ui/target/jrg-ui.esm.mjs";
+            class JrgElement extends ShadowElement {
+                constructor() {
+                    super("<h1>CustomElement</h1>");
+                    this.render();
+                }
+            }
+            CREATE_ELEMENT("jrg-element", JrgElement, {});
+            Vue.config.ignoredElements = ['jrg-element']
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello Vue!'
+                }
+            });
+        </script>
+    </body>
+</html>

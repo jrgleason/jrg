@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body ng-app="jrg-module">
+        <jrg-element></jrg-element>
+        <jrg-app></jrg-app>
+        <script type="module">
+            import { Component } from "//unpkg.com/@angular/core/esm2015/index.js";
+            import { createCustomElement } from "//unpkg.com/@angular/elements/esm2015/index.js"
+            import { platformBrowserDynamic } from "//unpkg.com/@angular/platform-browser-dynamic/esm2015/index.js"
+            import {ShadowElement, CREATE_ELEMENT} from "//unpkg.com/@jrg/ui/target/jrg-ui.esm.mjs";
+            class JrgElement extends ShadowElement {
+                constructor() {
+                    super("<h1>CustomElement</h1>");
+                    this.render();
+                }
+            }
+            CREATE_ELEMENT("jrg-element", JrgElement, {});
+            const MyComponent = Component({
+                selector:"jrg-app",
+                template:"<h1>Angular</h1>"
+            }).Class({
+                constructor: function() {}
+            });
+            const app = createCustomElement(MyComponent, {})
+            CREATE_ELEMENT("jrg-app", MyComponent, {});
+        </script>
+    </body>
+</html>
