@@ -109,3 +109,6 @@ dist
 
 # Other things
 .vscode
+
+# Opinionated
+package-lock.json
