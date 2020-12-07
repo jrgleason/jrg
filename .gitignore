@@ -114,5 +114,6 @@ dist
 package-lock.json
 
 # build
+target
 out
 *.log
