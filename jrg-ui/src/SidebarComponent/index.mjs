@@ -1,7 +1,7 @@
 import {ShadowElement} from "../ShadowElement.mjs";
 import template from "./component.html"
 import style from "./style.css"
-class ConfigurationService{
+class ConfigurationService {
     constructor(url) {
         this.url = url;
     }

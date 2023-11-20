@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  main-nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+#      - ./jrg-next-gen/dist:/www/data
+      - ./jrg-site:/www/data
+      - ./jrg-ui/target:/www/data/js
+    ports:
+      - "80:80"
+      - "443:443"

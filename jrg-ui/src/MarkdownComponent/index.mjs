@@ -1,4 +1,4 @@
-import marked from "marked";
+import { marked } from "marked";
 import {ShadowElement} from "../ShadowElement.mjs";
 import style from "./style.css"
 export class MarkdownComponent extends ShadowElement{

@@ -1,5 +1,21 @@
 # The JRG Web Platform
 
+# Getting Started
+
+## Building
+
+* `cd jrg-ui`
+* `npm i`
+* `npm run rollup`
+
+## Running
+
+* `docker-compose up -d`
+
+## Access
+
+* `http://localhost:8080`
+
 ## Goals
 
 * **Be inclusive:** We are not Angular, Vue, or React developers. We are WEB Developers and we need a big tent.

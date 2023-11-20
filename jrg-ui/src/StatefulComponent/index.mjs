@@ -13,6 +13,7 @@ export class StatefulComponent extends StatefulElement{
         }
     }
     toggle(){
+        // this.dispatchEvent(new CustomEvent('state-change', { detail: { newState: 'new value' }}));
         this.send("TOGGLE");
     }
 }
