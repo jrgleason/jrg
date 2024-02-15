@@ -1,4 +1,5 @@
 import './assets/main.css'
+import '../../jrg-ui/target/jrg-ui.esm.mjs';
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

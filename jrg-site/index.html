@@ -29,7 +29,7 @@
 
         @media screen and (max-width: 599px) {
             .jrg-wrapper-main {
-                height: calc(100% - 56px);
+                /*height: calc(100% - 56px);*/
                 background-size: auto 100%;
             }
         }
@@ -39,8 +39,11 @@
 <body>
     <jrg-top-bar-fixed></jrg-top-bar-fixed>
     <div class="jrg-wrapper-main" >
-        <jrg-splash class="scroll-area"></jrg-splash>
+<!--        <jrg-splash class="scroll-area">-->
+
+<!--        </jrg-splash>-->
+        <jrg-stateful></jrg-stateful>
     </div>
-    <script src="/js/jrg-ui.min.esm.mjs" type="module"></script>
+    <script src="/js/jrg-ui.esm.mjs" type="module"></script>
 </body>
 </html>

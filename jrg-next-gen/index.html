@@ -1,49 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
         <!--    <link href="//fonts.googleapis.com/css2?family=Quantico:ital,wght@1,700&display=swap" rel="stylesheet" />-->
         <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
         <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            html, body {
-                margin: 0;
-                --mdc-theme-primary: #000000;
-                --mdc-theme-on-primary: #bb0000;
-                --mdc-theme--secondary: #bb0000;
-                --mdc-theme-on-secondary: white;
-                overflow: hidden;
-                height: 100%;
-                width: 100%;
-            }
-
-            /*i.fab {*/
-            /*    color:white;*/
-            /*}*/
-            .jrg-wrapper-main {
-                overflow: auto;
-                /*height: calc(100% - 64px);*/
-                height: 100%;
-                width: 100%;
-            }
-
-            @media screen and (max-width: 599px) {
-                .jrg-wrapper-main {
-                    height: calc(100% - 56px);
-                    background-size: auto 100%;
-                }
-            }
-        </style>
-        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no,minimal-ui">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+              rel="stylesheet">
+                <style>
+                    html, body {
+                        margin: 0;
+                        --mdc-theme-primary: #000000;
+                        --mdc-theme-on-primary: #bb0000;
+                        --mdc-theme--secondary: #bb0000;
+                        --mdc-theme-on-secondary: white;
+                        height: 100%;
+                        width: 100%;
+                    }
+                </style>
+        <meta content="width=device-width,height=device-height,initial-scale=1,user-scalable=no,minimal-ui"
+              name="viewport">
     </head>
     <body>
         <jrg-top-bar-fixed></jrg-top-bar-fixed>
-        <div class="jrg-wrapper-main" >
-            <jrg-splash class="scroll-area"></jrg-splash>
-            <div id="app"></div>
-        </div>
-        <script type="module" src="/src/main.js"></script>
-        <script type="module" src="/js/jrg-ui.min.esm.mjs" ></script>
+        <jrg-splash class="scroll-area"></jrg-splash>
+        <div id="app"></div>
+        <script src="/src/main.js" type="module"></script>
     </body>
 </html>

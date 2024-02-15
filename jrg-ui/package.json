@@ -26,6 +26,7 @@
     "koa": "latest",
     "koa-static": "latest",
     "lit-element": "latest",
+    "locomotive-scroll": "latest",
     "mariadb": "latest",
     "marked": "latest",
     "mustache": "latest",
@@ -37,9 +38,10 @@
     "rollup-plugin-terser": "latest",
     "rxjs": "latest",
     "tslib": "latest",
-    "locomotive-scroll": "latest"
+    "koa-mount": "^4.0.0"
   },
   "dependencies": {
+
     "modularscroll": "^1.0.7"
   }
 }
