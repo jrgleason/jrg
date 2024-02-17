@@ -2,6 +2,7 @@ import mustache from "mustache";
 import style from "./SplashComponent/style.css";
 
 export class ShadowElement extends HTMLElement{
+
     constructor(
         template,
         style,
@@ -12,6 +13,7 @@ export class ShadowElement extends HTMLElement{
         this.template = template;
         this.style = style;
         this.attachShadow({mode});
+        this.previousDisplay = this.style.display;
         this.initialized = true;
         this.style.display="none";
         this.intersectionObserver = new IntersectionObserver(
@@ -61,6 +63,6 @@ export class ShadowElement extends HTMLElement{
         this.shadowRoot.append(sty);
     }
     initialize(){
-        this.style.display="initial"
+        this.style.display = this.previousDisplay;
     }
 }

@@ -36,4 +36,14 @@ CREATE_ELEMENT('jrg-sidebar', SidebarComponent, {});
 CREATE_ELEMENT('jrg-top-bar-fixed', TopBarFixed, {});
 CREATE_ELEMENT('jrg-splash', SplashComponent, {});
 
-export {CREATE_ELEMENT, bus}
+const CUSTOM_ELEMENTS = [
+    "jrg-drawer",
+    "jrg-stateful",
+    "jrg-person",
+    "jrg-markdown",
+    "jrg-sidebar",
+    "jrg-top-bar-fixed",
+    "jrg-splash",
+];
+
+export {CREATE_ELEMENT, bus, CUSTOM_ELEMENTS}
