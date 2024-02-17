@@ -17,14 +17,20 @@
                         height: 100%;
                         width: 100%;
                     }
+                    jrg-top-bar-fixed,
+                    .other {
+                        margin-top: 0;
+                    }
                 </style>
         <meta content="width=device-width,height=device-height,initial-scale=1,user-scalable=no,minimal-ui"
               name="viewport">
     </head>
     <body>
         <jrg-top-bar-fixed></jrg-top-bar-fixed>
-        <jrg-splash class="scroll-area"></jrg-splash>
-        <div id="app"></div>
+        <div class="other" style="height: 100%; width: 100%; padding-top: 64px;">
+            <jrg-splash class="scroll-area"></jrg-splash>
+            <div id="app"></div>
+        </div>
         <script src="/src/main.js" type="module"></script>
     </body>
 </html>
