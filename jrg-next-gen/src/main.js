@@ -1,19 +1,18 @@
 import './assets/main.css'
-import {CUSTOM_ELEMENTS} from '../../jrg-ui/target/jrg-ui.esm.mjs';
-
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import {createApp} from 'vue'
+import {createPinia} from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import "../../jrg-ui/target/jrg-ui.esm.mjs";
 
-const app = createApp(App, {
-    compilerOptions: {
-        isCustomElement: tag => CUSTOM_ELEMENTS.includes(tag)
-    }
-})
-
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+const bootstrap = async () => {
+    const app = createApp(App)
+    app.config.compilerOptions.isCustomElement = tag => tag.startsWith('jrg-')
+    app.use(createPinia())
+    app.use(router)
+    app.mount('#app')
+};
+(() => {
+    bootstrap().catch(console.error);
+})();

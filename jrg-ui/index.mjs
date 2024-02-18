@@ -13,29 +13,14 @@ import {SplashComponent} from "./src/SplashComponent/index.mjs";
 import {MyDrawer} from "./src/MyDrawerComponent/index.mjs";
 
 function CREATE_ELEMENT(name, object, params) {
-    customElements.get(name) ||
+    if(customElements.get(name)){
+        console.log(`Element ${name} already exists`);
+        return;
+    }
     customElements.define(name, object, params);
 }
 
 const bus = new BusParticipant();
-
-window.jrg_bus = bus;
-document.onreadystatechange = function () {
-    let state = document.readyState;
-    if (state === 'complete') {
-        console.log("loaded");
-    }
-};
-
-// Make global instead of individual
-CREATE_ELEMENT("jrg-drawer", MyDrawer, {});
-CREATE_ELEMENT("jrg-stateful", StatefulComponent, {});
-CREATE_ELEMENT("jrg-person", PersonComponent, {});
-CREATE_ELEMENT('jrg-markdown', MarkdownComponent, {});
-CREATE_ELEMENT('jrg-sidebar', SidebarComponent, {});
-CREATE_ELEMENT('jrg-top-bar-fixed', TopBarFixed, {});
-CREATE_ELEMENT('jrg-splash', SplashComponent, {});
-
 const CUSTOM_ELEMENTS = [
     "jrg-drawer",
     "jrg-stateful",
@@ -45,5 +30,21 @@ const CUSTOM_ELEMENTS = [
     "jrg-top-bar-fixed",
     "jrg-splash",
 ];
+(() => {
+    window.jrg_bus = bus;
+    document.onreadystatechange = function () {
+        let state = document.readyState;
+        if (state === 'complete') {
+            console.log("loaded");
+        }
+    };
+    CREATE_ELEMENT("jrg-drawer", MyDrawer, {});
+    CREATE_ELEMENT("jrg-stateful", StatefulComponent, {});
+    CREATE_ELEMENT("jrg-person", PersonComponent, {});
+    CREATE_ELEMENT('jrg-markdown', MarkdownComponent, {});
+    CREATE_ELEMENT('jrg-sidebar', SidebarComponent, {});
+    CREATE_ELEMENT('jrg-top-bar-fixed', TopBarFixed, {});
+    CREATE_ELEMENT('jrg-splash', SplashComponent, {});
+})();
 
 export {CREATE_ELEMENT, bus, CUSTOM_ELEMENTS}
